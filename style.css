@@ -32,6 +32,7 @@
     --border-radius-rounded: 50%; /* används för att göra rundade hörn tex */
 }
 
+/* general */
 html, body {
     font-size: 16px;
     line-height: 1.5;
@@ -44,6 +45,7 @@ html, body {
 .top-menu {
     background-color: var(--color-theme);
     color: var(--color-white);
+    height: 40px;
 }
     .top-menu > .container {
         height: 100%; /* denna anpassas till height i top.menu om man har det tex height 50px */
@@ -52,27 +54,65 @@ html, body {
         align-items: center;
     }
 
-    .top-menu .menu-links {
-        
-    }
-
-    .top-menu a {
-        color: var(--color-white);
-        text-decoration: none;
-        margin: 0 1.2rem;
-    }
-        .top-menu a:hover {
-            color: var(--color-theme-dark);
+        .top-menu .site-settings {
+            display: flex; /* detta för att inte currency och language inte ska hamna under varandra utan brevid varandra istället */
         }
 
-    .top-menu .social-media {
-        margin: 1rem;
-    }
-
-        .top-menu .social-media a {
-            margin: 0 0.3rem;
-        }
-
-            .top-menu .social-media a:last-child {
-                margin: 0 0 0 0.3rem;
+            .top-menu .site-settings .dropdown-theme {
+                background-color: var(--color-theme);
+                color: var(--color-white);
             }
+
+                .top-menu .site-settings .dropdown-theme button {
+                    background-color: var(--color-theme);
+                    color: var(--color-white);
+                    border: none;
+                }
+                    .top-menu .site-settings .dropdown-theme button:hover {
+                    color: var(--color-theme-dark);
+                    }
+
+                .top-menu .site-settings .dropdown-theme .dropdown-menu {
+                    background-color: var(--color-theme);
+                    color: var(--color-white);
+                    border: none;
+                    width: 250px;
+                    margin-top: 3rem;
+                }
+                    .top-menu .site-settings .dropdown-theme .dropdown-menu .dropdown-item {
+                        background-color: var(--color-theme);
+                        color: var(--color-white);
+                        border: none;
+                        width: 100%;
+                        margin: 0;
+                    }
+                        .top-menu .site-settings .dropdown-theme .dropdown-menu .dropdown-item:hover {
+                            background-color: var(--color-theme-dark);
+                            color: var(--color-white);
+                        }
+                        
+        .top-menu .menu-links {
+            padding: 0.7rem 0;
+        }
+
+            .top-menu .menu-links a {
+                color: var(--color-white);
+                text-decoration: none;
+                margin: 0 1rem;
+            }
+                .top-menu .menu-links a:hover {
+                    color: var(--color-theme-dark);
+                }
+
+            .top-menu .menu-links .social-media {
+                margin: 1rem;
+                font-size: var(--font-size-14);
+            }
+
+                .top-menu .menu-links .social-media a {
+                    margin: 0 0.4rem;
+                }
+
+                    .top-menu .menu-links .social-media a:last-child {
+                        margin: 0 0 0 0.3rem;
+                    }
