@@ -41,7 +41,7 @@ html, body {
     color: var(--color-theme-dark); /* använt sig utav variablerna överst */
 }
 
-.btn-theme { /* denna "knapp" läggs in här då det är en länk */
+.btn-theme { /* denna "knapp" läggs in här då det är en länk och kan användas på alla länkar */
     background-color: var(--color-theme);
     color: var(--color-white);
     border-radius: var(--border-radius-medium); /* rundade hörn */
@@ -61,6 +61,7 @@ html, body {
     font-weight: var(--font-weight-medium);
     padding-left: 1.75rem;
     padding-right: 1.75rem;
+    transition: 0.25s ease-in-out;
 }
     btn-white:hover {
         background-color: var(--color-theme-dark);
@@ -389,6 +390,10 @@ html, body {
             }
 
 /* shop by category */
+.shop-by-category .container {
+    padding-bottom: 5rem;
+}
+
     .shop-by-category .grid {
         display: grid;
         gap: 0.8rem;
@@ -562,8 +567,58 @@ html, body {
             height: 100%;
         }
 
+/* new customers */
+.newcustomer-showcase {
+    background-color: var(--color-gray-1);
+}
+    .newcustomer-showcase .container {
+        display: flex;
+        justify-content: space-between;
+        height: 25rem;
+        margin-top: 9rem;
+    }
 
+        .newcustomer-showcase .newcustomer-content {
+            display: flex;
+            background-color: var(--color-theme);
+            width: 15rem;
+            margin-left: 4rem;
+        }
 
+            .newcustomer-showcase .newcustomer-content .discount {
+                color: var(--color-white);
+                margin: auto;
+                text-align: center;
+            }
+
+                .newcustomer-showcase .newcustomer-content h1 {
+                    font-size: 3.75rem;
+                    font-family: var(--font-play);
+                    font-weight: var(--font-weight-bold);
+                }
+                    .newcustomer-showcase .newcustomer-content h1 span {
+                        font-size: 0.5em;
+                    }
+
+        .newcustomer-showcase a:hover {
+                background-color: var(--color-theme-dark);
+                color: var(--color-white);
+                border: 0;
+            }
+
+        .learnmore-content {
+            text-align: left;
+            width: 30rem;
+            align-items: center;
+            margin: auto;
+            margin-right: 4rem;
+        }
+            .learnmore-content p {
+                color: var(--color-white);
+                font-size: 0.9rem;
+            }
+
+            
 
 
 /* featured products */
