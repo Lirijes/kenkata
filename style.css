@@ -32,7 +32,7 @@
     --border-radius-rounded: 50%; /* används för att göra rundade hörn tex */
 }
 
-/* general */
+/* --------------general----------------- */
 html, body {
     font-size: 16px;
     line-height: 1.5;
@@ -100,6 +100,107 @@ html, body {
 .outofstock {
     color: var(--color-product-outofstock);
 }
+
+/* ----------------------card--------------------------- */
+.card {
+    position: relative;
+    height: 400px;
+    width: 350px;
+    overflow: hidden;
+}
+.card img {
+    height: 400px;
+}
+
+.card .card-body {
+    position: absolute;
+    bottom: 0;
+    height: 14%;
+    width: 100%;
+    color: var(--color-white);
+    z-index: 1;
+    transition: 0.3s ease-in-out;
+    font-size: 1rem;
+}
+    .card:hover .card-body {
+        height: 40%;
+    }
+
+    .card .card-body h1 {
+        font-size: 1.12rem;
+        margin-bottom: 1rem;
+        font-weight: var(--font-weight-regular);
+        transition: 0.3s ease-in-out;
+    }
+        .card:hover .card-body h1 {
+            margin-bottom: 0;
+        }
+
+    .card .card-body button {
+        background-color: transparent;
+        color: var(--color-white);
+        border: 1px solid var(--color-white);
+        font-size: 0.87rem;
+        padding-left: 0.9rem;
+        padding-right: 0.9rem;
+        margin: 0.7rem 0;
+    }
+
+    .card .card-body .card-old-price {
+        text-decoration: line-through;
+        margin: 0;
+    }
+
+    .card .card-body .card-discount-price {
+        color: var(--color-theme);
+        font-weight: var(--font-weight-medium);
+        font-size: 1.5em;
+        margin: 0;
+    }
+
+.card .card-menu {
+    position: absolute;
+    z-index: 1;
+    top: 101%;
+    right: 10%;
+    list-style: none;
+    margin: auto;
+    padding: 0.5rem;
+    font-size: 1.25rem;
+    border-radius: var(--border-radius-medium);
+    background-color: var(--color-white);
+    transition: top 0.3s ease-in-out;
+}
+    .card:hover .card-menu {
+        top: 20px;
+    }
+
+        .card .card-menu li {
+            margin-top: 0.3rem;
+            margin-bottom: 0.3rem;
+            font-size: 1em; /* förhåller sig till card-menu font size 1.25rem */
+        }
+
+            .card .card-menu li a {
+                color: var(--color-gray-0);
+            }
+                .card .card-menu li a:hover {
+                    color: var(--color-theme);
+                }
+
+.card .card-background {
+    position: absolute;
+    bottom: 0;
+    height: 15%;
+    width: 100%;
+    background-color: var(--color-theme-dark);
+    opacity: 0.90;
+    transition: height 0.3s ease-in-out;
+}
+    .card:hover .card-background {
+        height: 100%;
+    }
+/* ----------------------------------------------------------- */
 
 /* top-menu */
 .top-menu {
@@ -463,7 +564,7 @@ html, body {
     }
     
 /* new arrivals */
-.new-arrivals {
+/* .new-arrivals {
     padding-top: 6rem;
 }
 
@@ -544,7 +645,7 @@ html, body {
             .new-arrivals .card .card-menu li {
                 margin-top: 0.3rem;
                 margin-bottom: 0.3rem;
-                font-size: 1em; /* förhåller sig till card-menu font size 1.25rem */
+                font-size: 1em; förhåller sig till card-menu font size 1.25rem
             }
 
                 .new-arrivals .card .card-menu li a {
@@ -566,7 +667,7 @@ html, body {
         .new-arrivals .card:hover .card-background {
             height: 100%;
         }
-
+ */
 /* new customers */
 .newcustomer-showcase {
     background-color: var(--color-gray-1);
@@ -618,73 +719,72 @@ html, body {
                 font-size: 0.9rem;
             }
 
-            
-
-
 /* featured products */
-.fa-cart-shopping {
-    font-size: 0.9em; /* genom att använda em förhåller sig det till font size i card-menu */
-}
 
-.featured-products .card {
-    position: relative; 
-    height: 400px;
-    overflow: hidden;
-}
 
-.featured-products .card-menu {
-    position: absolute;
-    z-index: 1;
-    top: 100%;
-    right: 10%;
-    list-style: none;
-    margin: auto;
-    padding: 0.5rem;
-    border: 1px solid black;
-    font-size: 20px;
-    border-radius: 25px;
-    background-color: white;
-    transition: top 0.3s ease-in-out;
+/* flash sale */
+.flash-sale-showcase {
+    background-color: var(--color-theme-dark);
 }
-    .featured-products .card:hover .card-menu {
-        top: 20px;
+    .flash-sale-showcase .container {
+        display: flex;
+        justify-content: space-between;
+        height: 25rem;
+        margin-top: 9rem;
     }
 
-    .featured-products .card-menu li a {
-        color: #AAAAAA;
-    }
-        .card-menu li a:hover {
-            color: #20D3C2;
+        .flash-sale-showcase .flash-sale-content {
+            display: flex;
+            text-align: center;
+            align-items: center;
+            background-color: var(--color-theme);
+            color: var(--color-white);
+            width: 12rem;
+            height: 14rem;
+            margin-left: 4rem;
         }
 
-.featured-products .card-body {
-    position: absolute;
-    bottom: 0;
-    color: #FFFFFF;
-    z-index: 1;
-    transition: 0.3s ease-in-out;
-}
-    .featured-products .card:hover .card-body {
-        bottom: 30%;
-    }
+        .flash-sale-showcase .countdown-content {
+            margin: auto;
+            margin-left: 25rem;
+            text-align: center;
+            flex-direction: column;
+        }
 
-    .featured-products .card-body h1 {
-        font-size: 1rem;
-    }
+        .flash-sale-showcase .countdown-content .countdown {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-.featured-products .card-background {
-    position: absolute;
-    bottom: 0;
-    height: 15%;
-    width: 100%;
-    background-color: #0e153d;
-    opacity: 0.90;
-    transition: height 0.3s ease-in-out;
-}
-    .featured-products .card:hover .card-background {
-        height: 100%;
-    }
+            .flash-sale-showcase .countdown-content .cirkle {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 90px;
+                width: 90px;
+                border-radius: 50%;
+                background-color: white;
+                border: 2px dashed #20D3C2;
+                margin-left: 1.8rem;
+                margin-bottom: 1.8rem;
+            }
 
+                .flash-sale-showcase .countdown-content .cirkle h1 {
+                    color: var(--color-theme);
+                    font-size: 1.9rem;
+                    margin-top: 1.2rem;
+                    margin-bottom: 0;
+                }
+                .flash-sale-showcase .countdown-content .cirkle p {
+                    font-size: 0.8rem;
+                    margin-top: 0;
+                }
+
+            .flash-sale-showcase .countdown-content .shop-now-countdown {
+                margin-left: 1.5rem;
+            }
 
 
 
