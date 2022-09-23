@@ -911,6 +911,60 @@ html, body {
     padding-top: 12px;
 }
 
+/* my account */
+.site-title {
+    background-color: #50546E;
+    color: white;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+    .site-title .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+        .site-title h1 {
+            color: var(--color-theme);
+            font-size: 24px;
+            font-family: var(--font-roboto);
+            font-weight: var(--font-weight-medium);
+            margin: 0;
+        }
+
+        .site-title nav ul {
+            display: flex;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .site-title .breadcrumb {
+            list-style: none;
+            margin: 0;
+        }
+            .site-title .breadcrumb li {
+                display: inline;
+                font-size: 18px;
+            }
+            .site-title .breadcrumb li+li:before {
+                padding: 0 0.8rem 0 1rem;
+                color: white;
+                content: "/\00a0";
+            }
+            .site-title .breadcrumb li a {
+                color: var(--color-theme);
+                text-decoration: none;
+            }
+                .site-title .breadcrumb li a:hover {
+                    color: var(--color-theme-light);
+                    text-decoration: underline;
+                }
+
+
+
 
 
 
