@@ -783,8 +783,134 @@ html, body {
                 }
 
             .flash-sale-showcase .countdown-content .shop-now-countdown {
-                margin-left: 1.5rem;
+                margin-left: 1.7rem;
             }
+
+/* top seller */
+.top-seller {
+    margin-top: 2rem;
+}
+
+    .top-seller .grid {
+        display: grid;
+        gap: 0.8rem;
+        grid-template-columns: repeat(2, 350px);
+        grid-template-rows: repeat(2, 300px);
+    }
+
+        .top-seller .first-card {
+            height: 650px;
+            width: 550px;
+            overflow: hidden;
+        }
+
+            .top-seller .first-card img {
+                height: 549px;
+            }
+
+        .top-seller .second-card {
+            height: 300px;
+            width: 550px;
+        }
+            .top-seller .second-card img {
+                height: 300px;
+            }
+    
+
+    #top-seller-box1 {
+        grid-column: 1 / 2;
+        grid-row: 1 / -1;
+    }
+    #top-seller-box2 {
+        grid-column: 2 / -1;
+        grid-row: 1 / 2;
+    }
+    #top-seller-box3 {
+        grid-column: 2 / 2;
+        grid-row: 2 / -1;
+    }
+
+
+/* subscribe */
+.subscribe {
+    margin-top: 8rem;
+    background-color: var(--color-gray-4);
+}
+
+    .subscribe .container {
+        display: flex;
+        justify-content: space-between;
+        height: 20rem;
+    }
+
+        .subscribe .subscribe-content {
+            padding-top: 75px;
+        }
+
+            .subscribe .subscribe-content h1 {
+                font-size: 40px;
+            }
+                .subscribe .subscribe-content h1 span {
+                    color: var(--color-theme);
+                }
+
+            .subscribe .subscribe-content p {
+                width: 26rem;
+            }
+
+            .subscribe .subscribe-form {
+                position: relative;
+                padding-top: 1rem;
+            }
+            
+                .subscribe .subscribe-form input {
+                    border: 1px solid var(--color-gray-1);
+                    width: 30rem;
+                    padding: 0.5rem;
+                    padding-left: 1rem;
+                    font-style: var(--font-roboto);
+                    font-size: 14px;
+                    border-radius: var(--border-radius-medium);
+                }
+                
+                .subscribe .subscribe-form button {
+                    position: absolute;
+                    right: 0.60%;
+                    top: 33.5%;
+                    background-color: var(--color-theme);
+                    color: var(--color-white);
+                    font-style: var(--font-roboto);
+                    font-size: 16px;
+                    border: none;
+                    border-radius: var(--border-radius-medium);
+                    width: 7rem;
+                    height: 2.2rem;
+                    transition: 0.3s ease-in-out;
+                }
+
+                    .subscribe .subscribe-form button:hover {
+                        background-color: var(--color-white);
+                        color: var(--color-theme-dark);
+                    }
+
+        .subscribe .gray-box {
+            background-color: var(--color-gray-1);
+            width: 37rem;
+        }
+
+/* end */
+.copyright {
+    background-color: black;
+    height: 40px;
+}
+
+.copyright .container h1{
+    font-size: 12px;
+    color: var(--color-white);
+    font-weight: var(--font-weight-regular);
+    padding-top: 12px;
+}
+
 
 
 
